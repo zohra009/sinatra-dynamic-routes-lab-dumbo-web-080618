@@ -26,7 +26,7 @@ class App < Sinatra::Base
   end
   get '/:operation/:number1/:number2' do
     operation = params[:operation]
-    number1 = params[:number1].to_i
+    number1 = params[:number1].to_i #.to_i is setting it to integer
     number2 = params[:number2].to_i
     if operation == "add"
       answer = number1 + number2
@@ -39,7 +39,7 @@ class App < Sinatra::Base
     else
       answer = "Unable to perform this operation"
     end
-    answer.to_s
+    answer.to_s #to_s is setting it to string
   end
 
 end
